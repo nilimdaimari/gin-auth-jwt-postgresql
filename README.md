@@ -21,7 +21,7 @@ point for building scalable APIs and microservices.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/gin-auth-jwt-postgresql.git
+git clone https://github.com/nilimdaimari/gin-auth-jwt-postgresql.git
 cd gin-auth-jwt-postgresql
 ```
 
