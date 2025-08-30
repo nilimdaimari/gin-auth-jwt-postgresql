@@ -1,17 +1,16 @@
 # Building Secure JWT Authentication in Gin with PostgreSQL
 
 A boilerplate authentication service built with **Gin (Go)**, **JWT** for secure
-token-based authentication, and **PostgreSQL** for persistence.\
-Ideal starting point for building scalable APIs and microservices.
+token-based authentication, and **PostgreSQL** for persistence. Ideal starting
+point for building scalable APIs and microservices.
 
 ---
 
 ## 📖 Features
 
-- User registration and login
+- User registration, login and logout
 - JWT-based authentication
 - Password hashing with bcrypt
-- Role-based authorization
 - PostgreSQL integration
 - Environment-based configuration
 
@@ -41,21 +40,29 @@ CREATE TABLE users (
 
 -- Optional: Create an index on email for faster lookups
 CREATE INDEX idx_users_email ON users(email);
+```
 
 ## Run the server
-go run ./cmd
- or
+
+go run ./cmd\
+or\
 go run .
 
 ## 🔑 API Endpoints
 
-POST /auth/register – Register new user
-POST /auth/login – Login and get JWT
-GET /auth/profile – Get user profile (JWT required)
+### Public Routes
+
+- **POST** `/api/v1/register` – Register a new user
+- **POST** `/api/v1/login` – Login and get a JWT
+
+### Protected Routes (JWT required)
+
+- **POST** `/api/v1/refresh-token` – Refresh access token
+- **POST** `/api/v1/logout` – Logout the current user
+- **GET** `/api/v1/profile` – Get the authenticated user profile
 
 # 📌 Notes
 
 - Do not commit .env with real secrets. Add it to .gitignore.
 - Use HTTPS in production.
 - Rotate and protect your JWT_SECRET.
-```
