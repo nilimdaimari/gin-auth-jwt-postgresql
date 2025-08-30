@@ -1,8 +1,8 @@
 # Building Secure JWT Authentication in Gin with PostgreSQL
 
-A boilerplate authentication service built with **Gin (Go)**, **JWT** for secure
-token-based authentication, and **PostgreSQL** for persistence. Ideal starting
-point for building scalable APIs and microservices.
+Authentication service built with **Gin (Go)**, **JWT** for secure token-based
+authentication, and **PostgreSQL** for persistence. Ideal starting point for
+building scalable APIs and microservices.
 
 ---
 
