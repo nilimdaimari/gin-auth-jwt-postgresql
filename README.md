@@ -48,6 +48,10 @@ go run ./cmd\
 or\
 go run .
 
+## Build the app
+
+go build -o myapp ./cmd/main.go
+
 ## 🔑 API Endpoints
 
 ### Public Routes
